@@ -1,0 +1,48 @@
+.container-sign{
+    background-image: url('/sheologin.jpg');
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    height: 90vh;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.signup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    width: 50%;
+    background-color:rgba(0, 0, 0, 0.481);
+    backdrop-filter: blur(5px);
+    border-radius: 4px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.container-sign input{
+    background-color: black;
+    color: white;
+}
+.container-sign button{
+    background-color:white ;
+    color: black;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 4px;
+    padding: 8px 15px 8px 15px;
+    border: none;
+    transition: all .8s;
+}

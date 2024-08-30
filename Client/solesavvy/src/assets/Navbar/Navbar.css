@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Macondo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #565360;
+    position: sticky;
+    
+}
+.logo{
+    font-family: "Macondo", cursive;
+    font-weight: 800;
+    font-style: normal;
+    letter-spacing: 1px;
+    color: black;
+}
+.Category{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+.Category a{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    transition: all .5s;
+    color: black;
+}
+.Category a:hover{
+    transform: scale(1.1);
+}
+.nav_elements{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transform: scale(1.2);
+    padding-right: 8px;
+    color: black;
+}
+
+.nav_elements a{
+    transition: all .5s;
+}
+.nav_elements a:hover{
+    transform: scale(1.3);
+}
+.elements::before{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    transform: scaleX(0);
+    transition: all .3s;
+}
+.elements:hover::before{
+    transform: scaleX(1);
+}
+.signup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.248);
+    backdrop-filter: blur(5px);
+    color: black;
+    width: 50%;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.signup button{
+    background-color: black;
+    color: white;
+}

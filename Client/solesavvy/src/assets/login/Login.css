@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background-image: url('/sheologin.jpg');
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
+    height: 100vh;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.485);
+    backdrop-filter: blur(5px);
+    border-radius: 4px;
+    padding: 10px;
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+.login label{
+    color: white;
+    background-color: rgba(255, 0, 0, 0.54);
+    font-weight: 300;
+    padding: 8px;
+    border-radius: 2px;
+}
+input{
+    outline: none;
+    background-color: black;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 100%;
+    border-radius: 2px;
+    padding: 8px;
+    border: none;
+    width: 250px;
+}
+input::placeholder{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffffc6;
+}
+button{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: white;
+    border-radius: 4px;
+    padding: 8px;
+    border: none;
+    transition: all .8s;
+}
+button:hover{
+    transform: scale(1.05);
+    background-color: black;
+    color: white;
+}
+a{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+    color: #fff;
+}

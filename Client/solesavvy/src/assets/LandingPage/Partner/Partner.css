@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Macondo&family=Matemasie&family=New+Amsterdam&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');.par{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.par h2{
+    font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.partners{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 8px;
+    margin-top: 20px;
+}
+.Part_nike,.Part_vans,.Part_adidas,.Part_puma,.Part_converse{
+   width: calc(100%/3);
+   background-color: red;
+   height: 100px;
+   border-radius: 8px;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.Part_nike{
+    background-image: url('/nike.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.Part_vans{
+    background-image: url('/vans.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.Part_adidas{
+    background-image: url('/adidas.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.Part_puma{
+    background-image: url('/puma.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.Part_converse{
+    background-image: url('/Converse.jpg');
+    background-position: center;
+    background-size: cover;
+}
