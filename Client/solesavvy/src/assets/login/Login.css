@@ -1,83 +1,179 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-*{
-    margin: 0;
-    border: 0;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container{
-    background-image: url('/sheologin.jpg');
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    padding: 40px;
-    height: 100vh;
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 700;
-    font-style: normal;
+.container {
+  background: url('/sheologin.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
 }
 
-.login{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 30px;
-    width: 50%;
-    background-color: rgba(0, 0, 0, 0.485);
-    backdrop-filter: blur(5px);
-    border-radius: 4px;
-    padding: 10px;
-    height: auto;
-    padding-top: 40px;
-    padding-bottom: 80px;
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 0;
 }
-.login label{
-    color: white;
-    background-color: rgba(255, 0, 0, 0.54);
-    font-weight: 300;
-    padding: 8px;
-    border-radius: 2px;
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(30px, -30px) rotate(120deg);
+  }
+  66% {
+    transform: translate(-20px, 20px) rotate(240deg);
+  }
 }
-input{
-    outline: none;
-    background-color: black;
-    color: white;
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    width: 100%;
-    border-radius: 2px;
-    padding: 8px;
-    border: none;
-    width: 250px;
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 450px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 1.5rem;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  position: relative;
+  animation: fadeIn 0.5s ease-out;
 }
-input::placeholder{
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #ffffffc6;
+
+.login h1 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
 }
-button{
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    background-color: white;
-    border-radius: 4px;
-    padding: 8px;
-    border: none;
-    transition: all .8s;
+
+.login form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
-button:hover{
-    transform: scale(1.05);
-    background-color: black;
-    color: white;
+
+.login input {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
 }
-a{
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    cursor: pointer;
-    color: #fff;
+
+.login input:focus {
+  outline: none;
+  border-color: var(--text-primary);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+.login input::placeholder {
+  color: var(--text-light);
+}
+
+.login button {
+  width: 100%;
+  padding: 1rem;
+  background: var(--accent-color);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: 0.75rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.login button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.login button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.login button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.login a {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.login a:hover {
+  color: var(--text-primary);
+  text-decoration: underline;
+}
+
+.login > div[style*="color: red"],
+.login > div[style*="color: green"] {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  animation: slideIn 0.3s ease-out;
+}
+
+.login > div[style*="color: red"] {
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+}
+
+.login > div[style*="color: green"] {
+  background: #d1fae5;
+  border: 1px solid #a7f3d0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .login {
+    padding: 2rem 1.5rem;
+  }
+  
+  .login h1 {
+    font-size: 2rem;
+  }
 }

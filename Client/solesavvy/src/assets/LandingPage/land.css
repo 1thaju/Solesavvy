@@ -1,6 +1,19 @@
-.land{
-    background-color: #f1f1f1;
+.land {
+  background: var(--bg-secondary);
+  overflow-x: hidden;
 }
-.intro_img{
-    width: 100%;
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--primary-accent, #ffffff);
+  transform-origin: 0%;
+  z-index: 9999;
+}
+
+.intro_img {
+  width: 100%;
 }

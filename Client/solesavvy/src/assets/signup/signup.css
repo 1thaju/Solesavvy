@@ -1,48 +1,167 @@
-.container-sign{
-    background-image: url('/sheologin.jpg');
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-    height: 90vh;
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-}
-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-}
-.signup{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 30px;
-    width: 50%;
-    background-color:rgba(0, 0, 0, 0.481);
-    backdrop-filter: blur(5px);
-    border-radius: 4px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container-sign input{
-    background-color: black;
-    color: white;
+.container-sign {
+  background: url('/sheologin.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
 }
-.container-sign button{
-    background-color:white ;
-    color: black;
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    border-radius: 4px;
-    padding: 8px 15px 8px 15px;
-    border: none;
-    transition: all .8s;
+
+.container-sign::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 0;
+}
+
+.signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 450px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 1.5rem;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  position: relative;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.signup h1 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.signup form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.container-sign input {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.container-sign input:focus {
+  outline: none;
+  border-color: var(--text-primary);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+.container-sign input::placeholder {
+  color: var(--text-light);
+}
+
+.container-sign button {
+  width: 100%;
+  padding: 1rem;
+  background: var(--accent-color);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: 0.75rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.container-sign button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.container-sign button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.container-sign button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.signup a {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.signup a:hover {
+  color: var(--text-primary);
+  text-decoration: underline;
+}
+
+.signup > div[style*="color: red"],
+.signup > div[style*="color: green"] {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  animation: slideIn 0.3s ease-out;
+}
+
+.signup > div[style*="color: red"] {
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+}
+
+.signup > div[style*="color: green"] {
+  background: #d1fae5;
+  border: 1px solid #a7f3d0;
+}
+
+@media (max-width: 768px) {
+  .container-sign {
+    padding: 1rem;
+  }
+  
+  .signup {
+    padding: 2rem 1.5rem;
+  }
+  
+  .signup h1 {
+    font-size: 2rem;
+  }
 }
