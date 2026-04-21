@@ -37,7 +37,7 @@ function Signup() {
 
         setLoading(true)
         try {
-            await axios.post('http://localhost:5000/auth/signup', { username, email, password })
+            await axios.post('https://solesavvy.onrender.com/auth/signup', { username, email, password })
             setSuccess(true)
             setUsername('')
             setEmail('')

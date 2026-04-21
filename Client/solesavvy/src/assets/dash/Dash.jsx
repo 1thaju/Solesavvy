@@ -30,7 +30,7 @@ const ProductUpload = () => {
   
 
     try {
-      const response = await axios.post('http://localhost:5000/api/products/upload', data, {
+      const response = await axios.post('https://solesavvy.onrender.com/api/products/upload', data, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

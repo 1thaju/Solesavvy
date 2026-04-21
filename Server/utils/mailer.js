@@ -25,7 +25,7 @@ const sendOrderReceipt = async (userEmail, orderId, amount) => {
           <hr style="border: 1px solid #eaeaea; margin: 20px 0;" />
           <p style="color: #555;">Your sneakers are currently being processed. You will receive another email once your items have shipped.</p>
           <br/>
-          <a href="http://localhost:5173/orders" style="display: inline-block; background: #000; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px;">View Order Status</a>
+          <a href="https://solesavvy.vercel.app/orders" style="display: inline-block; background: #000; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px;">View Order Status</a>
         </div>
       `
     };

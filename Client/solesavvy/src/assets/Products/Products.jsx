@@ -25,13 +25,13 @@ function Products() {
         setLoading(true);
         try {
           if (activeTab === 'in-house') {
-            const response = await axios.get('http://localhost:5000/api/products');
+            const response = await axios.get('https://solesavvy.onrender.com/api/products');
             console.log("In-house Response:", response.data);
             setProducts(response.data);
           } else {
             const endpoint = searchQuery.trim() 
-              ? `http://localhost:5000/api/sneaks/search/${encodeURIComponent(searchQuery)}?limit=15` 
-              : `http://localhost:5000/api/sneaks/popular?limit=15`;
+              ? `https://solesavvy.onrender.com/api/sneaks/search/${encodeURIComponent(searchQuery)}?limit=15` 
+              : `https://solesavvy.onrender.com/api/sneaks/popular?limit=15`;
               
             const response = await axios.get(endpoint);
             console.log("Sneaks Response:", response.data);
@@ -106,7 +106,7 @@ function Products() {
       if (!url || typeof url !== 'string' || url.trim() === '') return fallbackUrl;
       if (url.startsWith('http')) return url.trim();
       const cleanPath = url.trim().startsWith('/') ? url.trim() : `/${url.trim()}`;
-      return `http://localhost:5000${cleanPath}`;
+      return `https://solesavvy.onrender.com${cleanPath}`;
     };
 
     const cardVariants = {

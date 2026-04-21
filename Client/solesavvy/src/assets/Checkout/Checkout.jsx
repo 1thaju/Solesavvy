@@ -43,7 +43,7 @@ function Checkout() {
     setLoading(true);
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/payment/create-session',
+        'https://solesavvy.onrender.com/api/payment/create-session',
         { 
           shippingAddress: formData,
           items: cart.items 

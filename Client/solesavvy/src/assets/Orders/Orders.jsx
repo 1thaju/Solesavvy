@@ -27,7 +27,7 @@ function Orders() {
       }
 
       try {
-        const response = await axios.get('http://localhost:5000/api/orders', {
+        const response = await axios.get('https://solesavvy.onrender.com/api/orders', {
           headers: { Authorization: token }
         });
         setOrders(response.data);

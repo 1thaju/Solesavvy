@@ -21,7 +21,7 @@ function NavBar({ setCategory }) {
         setCategory(category);
         setMobileMenuOpen(false); // Close mobile menu if open
         try {
-            const response = await axios.post('http://localhost:5000/api/products', { category });
+            const response = await axios.post('https://solesavvy.onrender.com/api/products', { category });
             console.log(response.data);  
             nav('/category');
         } catch (error) {

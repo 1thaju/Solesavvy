@@ -22,7 +22,7 @@ function ProductDetail() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/products/${id}`);
+        const response = await axios.get(`https://solesavvy.onrender.com/api/products/${id}`);
         setProduct(response.data);
       } catch (error) {
         console.error(error.message);

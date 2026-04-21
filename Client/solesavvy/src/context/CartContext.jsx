@@ -30,7 +30,7 @@ export const CartProvider = ({ children }) => {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.get('http://localhost:5000/api/cart', {
+      const response = await axios.get('https://solesavvy.onrender.com/api/cart', {
         headers: { Authorization: token }
       });
       setCart(response.data);
@@ -53,7 +53,7 @@ export const CartProvider = ({ children }) => {
     setError(null);
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/cart/add',
+        'https://solesavvy.onrender.com/api/cart/add',
         { productId, quantity, size },
         { headers: { Authorization: token } }
       );
@@ -78,7 +78,7 @@ export const CartProvider = ({ children }) => {
     setError(null);
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/cart/update/${itemId}`,
+        `https://solesavvy.onrender.com/api/cart/update/${itemId}`,
         { quantity },
         { headers: { Authorization: token } }
       );
@@ -103,7 +103,7 @@ export const CartProvider = ({ children }) => {
     setError(null);
     try {
       const response = await axios.delete(
-        `http://localhost:5000/api/cart/remove/${itemId}`,
+        `https://solesavvy.onrender.com/api/cart/remove/${itemId}`,
         { headers: { Authorization: token } }
       );
       setCart(response.data);
@@ -126,7 +126,7 @@ export const CartProvider = ({ children }) => {
     setLoading(true);
     setError(null);
     try {
-      await axios.delete('http://localhost:5000/api/cart/clear', {
+      await axios.delete('https://solesavvy.onrender.com/api/cart/clear', {
         headers: { Authorization: token }
       });
       setCart({ items: [], user: null });

@@ -7,7 +7,7 @@ function CategoryPage({ category }) {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await axios.post('http://localhost:5000/api/products', { category });
+                const response = await axios.post('https://solesavvy.onrender.com/api/products', { category });
                 setProducts(response.data);
             } catch (error) {
                 console.error('Error fetching products:', error.message);
@@ -29,7 +29,7 @@ function CategoryPage({ category }) {
                     <div>
                         {products.map((product) => (
                             <div key={product._id}>
-                                <img src={`http://localhost:5000${product.imageUrl.trim()}`} alt={product.name} />
+                                <img src={`https://solesavvy.onrender.com${product.imageUrl.trim()}`} alt={product.name} />
                                 <h3>{product.name}</h3>
                                 <p>{product.description}</p>
                                 <p>Price: ₹{product.price}</p>

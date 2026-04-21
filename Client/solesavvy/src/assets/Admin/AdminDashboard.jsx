@@ -22,10 +22,10 @@ function AdminDashboard() {
       try {
         const config = { headers: { Authorization: token } };
         
-        const statsRes = await axios.get('http://localhost:5000/api/admin/stats', config);
+        const statsRes = await axios.get('https://solesavvy.onrender.com/api/admin/stats', config);
         setStats(statsRes.data);
 
-        const ordersRes = await axios.get('http://localhost:5000/api/admin/orders', config);
+        const ordersRes = await axios.get('https://solesavvy.onrender.com/api/admin/orders', config);
         setOrders(ordersRes.data);
 
       } catch (error) {

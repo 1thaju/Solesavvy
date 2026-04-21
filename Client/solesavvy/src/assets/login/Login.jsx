@@ -25,7 +25,7 @@ function Login() {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/auth/login', { email, password });
+      const response = await axios.post('https://solesavvy.onrender.com/auth/login', { email, password });
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('username', response.data.username);
       

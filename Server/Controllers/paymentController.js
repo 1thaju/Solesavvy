@@ -18,7 +18,7 @@ const createCheckoutSession = async (req, res) => {
           currency: 'inr',
           product_data: {
             name: item.product.name || 'Sneaker',
-            images: [`http://localhost:5000${item.product.imageUrl}`],
+            images: [`https://solesavvy.onrender.com${item.product.imageUrl}`],
           },
           unit_amount: Math.round(item.product.price * 100), // Stripe expects cents/paise
         },
@@ -49,8 +49,8 @@ const createCheckoutSession = async (req, res) => {
       payment_method_types: ['card'],
       line_items: lineItems,
       mode: 'payment',
-      success_url: `http://localhost:5173/orders?success=true&order_id=${newOrder._id}`,
-      cancel_url: `http://localhost:5173/checkout?canceled=true`,
+      success_url: `https://solesavvy.vercel.app/orders?success=true&order_id=${newOrder._id}`,
+      cancel_url: `https://solesavvy.vercel.app/checkout?canceled=true`,
       metadata: {
         order_id: newOrder._id.toString()
       }
