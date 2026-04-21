@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const sneaksController = require('../controllers/sneaksController');
+const sneaksController = require('../Controllers/sneaksController');
 
 // GET /api/sneaks/popular
 router.get('/popular', sneaksController.getPopularSneakers);
